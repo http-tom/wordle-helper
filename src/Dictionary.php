@@ -1,6 +1,8 @@
 <?php
 namespace HttpTom\WordleHelper;
 
+use HttpTom\WordleCrack\Reducer;
+
 class Dictionary {
 
     public $words = [];
