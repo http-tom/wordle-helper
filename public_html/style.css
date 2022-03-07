@@ -4,7 +4,7 @@ html, body {
     background: #292929;
     color: #eee;
     text-align: center;
-    margin: 1em;
+    margin: 1em 1em 4em;
     padding: 0;
     font-family: Lato;
     font-weight: 300;
@@ -23,12 +23,16 @@ a:hover {
     text-decoration: underline;
 }
 .btn {
-    background-color:coral;
+    background-color:#ff7f50;
     padding: 0.6em 1.3em;
     border: 1px solid darkcyan;
     color: #fff;
     font-weight: bold;
     font-size: 1em;
+}
+.btn:active {
+    background-color: #ce643e;
+    border: 1px inset;
 }
 input.frm-control {
     background-color: #131516;
@@ -42,9 +46,30 @@ input.frm-control {
     margin: auto;
     margin-top: 1em;
 }
+.p0 {
+    padding: 0;
+}
+.m0 {
+    margin: 0;
+}
 .m1 {
     margin: 1em;
 }
 .m2 {
     margin: 2em;
+}
+.rounded {
+    border-radius: 50%;
+}
+.hidden {
+    display: none;
+}
+
+li.badge {
+    display: inline-block;
+    margin: 0.2em 0.4em;
+    background-color: darkolivegreen;
+    border-radius: 6px;
+    padding: 2px 15px 6px;
+    line-height: 1.6rem;
 }

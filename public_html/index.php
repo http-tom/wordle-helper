@@ -9,11 +9,16 @@
 </head>
 <body>
     <h1>WordleHelper</h1>
+    <button role="button" class="btn rounded toggler" data-toggle="help-description"><h3 class="m0 p0">?</h3></button>
+    <div id="help-description" class="hidden">
+        <h4>A Wordle helper.</h4>
+        <p>Enter no characters into the boxes to get a random suggestion (starting word).<br/>Use the boxes to enter a character or group of characters.</p>
+    </div>
     <form method="post" action="wordle.php" id="frmAjaxHelper">
         <h4>Include Characters</h4>
-        <input type="text" class="frm-control" name="include[]" maxlength="4" size="5"> <button type="button" id="addInclude" class="btn">+</button>
+        <input type="text" name="include[]" maxlength="4" size="5" class="frm-control" autocomplete="off"> <button type="button" id="addInclude" class="btn">+</button>
         <h4>Exclude Characters</h4>
-        <input type="text" class="frm-control" name="exclude[]" maxlength="24" size="5"> <button type="button" id="addExclude" class="btn">+</button>
+        <input type="text" name="exclude[]" maxlength="24" size="5" class="frm-control" autocomplete="off"> <button type="button" id="addExclude" class="btn">+</button>
         <div>
             <input type="submit" value="Go" class="btn m1">
         </div>
