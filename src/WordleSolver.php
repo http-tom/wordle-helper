@@ -1,7 +1,6 @@
 <?php
 namespace HttpTom\WordleHelper;
 
-
 use HttpTom\WordleHelper\Template;
 
 
@@ -9,13 +8,20 @@ class WordleSolver extends WordleHelper {
 
     private $template = null;
 
+    /**
+     * Sets the positional template
+     */
     public function setTemplate(Template $template) {
         $this->template = $template;
     }
 
+    /**
+     * Returns results taking into account the template for positional letter word matches
+     */
     public function results() {
-        $results = $this->dictionary->words;
+        $results = parent::results();
         $template = $this->template->getTemplate();
+
         // filter so that words matching template places are returned only
         foreach($results as $k => $word) {
             $word = strtolower($word);

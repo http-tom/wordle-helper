@@ -1,6 +1,7 @@
 <?php
 namespace HttpTom\WordleCrack;
 
+
 class Reducer {
 
     /**

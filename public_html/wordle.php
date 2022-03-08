@@ -50,11 +50,17 @@ if(php_sapi_name() == 'cli') {
     }
 
     $wordle->setTemplate($template);
-    
+
     echo $wordle;
 }
 else {
     header('Content-Type: application/javascript');
+
+    function safeStr($input) {
+        $re = '/[^a-z]/mi';
+        return substr(preg_replace($re, '', $input),0,4);
+    }
+
     if((isset($_POST['include']) && array_filter($_POST['include']))
         || (isset($_POST['exclude']) && array_filter($_POST['exclude']))
         || (isset($_POST['template_1']) && !empty($_POST['template_1']))
@@ -64,18 +70,18 @@ else {
         || (isset($_POST['template_5']) && !empty($_POST['template_5']))
         ) {
         foreach($_POST['include'] as $inc) {
-            $wordle->include($inc);
+            $wordle->include(safeStr($inc));
         }
         foreach($_POST['exclude'] as $exc) {
-            $wordle->exclude($exc);
+            $wordle->exclude(safeStr($exc));
         }
 
 
-        $template->setCharacter(1, isset($_POST['template_1']) ? $_POST['template_1'] : '');
-        $template->setCharacter(2, isset($_POST['template_2']) ? $_POST['template_2'] : '');
-        $template->setCharacter(3, isset($_POST['template_3']) ? $_POST['template_3'] : '');
-        $template->setCharacter(4, isset($_POST['template_4']) ? $_POST['template_4'] : '');
-        $template->setCharacter(5, isset($_POST['template_5']) ? $_POST['template_5'] : '');
+        $template->setCharacter(1, isset($_POST['template_1']) ? safeStr($_POST['template_1']) : '');
+        $template->setCharacter(2, isset($_POST['template_2']) ? safeStr($_POST['template_2']) : '');
+        $template->setCharacter(3, isset($_POST['template_3']) ? safeStr($_POST['template_3']) : '');
+        $template->setCharacter(4, isset($_POST['template_4']) ? safeStr($_POST['template_4']) : '');
+        $template->setCharacter(5, isset($_POST['template_5']) ? safeStr($_POST['template_5']) : '');
 
         $wordle->setTemplate($template);
 

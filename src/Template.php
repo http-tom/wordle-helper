@@ -1,6 +1,7 @@
 <?php
 namespace HttpTom\WordleHelper;
 
+
 class Template {
 
     protected $positions = [

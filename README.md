@@ -1,8 +1,13 @@
-# Wordle Cracker
+# Wordle Helper
 
 Gives suggestions to help with solving Wordle puzzles.
 
 Can be run via commandline or via web interface.
+
+### Installation
+
+Run composer install `composer install`.
+
 
 ### Command line
 
@@ -14,3 +19,7 @@ Usage: `php wordle.php a e i _o _u \"[i a e]\"`    where _prefixed letters will 
 
 `php wordle.php ight` to get all words with ight in them
 
+
+### Web server setup
+
+Point document root to public_html folder.

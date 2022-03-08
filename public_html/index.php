@@ -36,6 +36,10 @@
         <div id="results"></div>
         <div id="suggestions"></div>
     </form>
+
+    <footer>
+        View source code on <a href="https://github.com/http-tom/wordle-helper" target="_blank">GitHub</a>
+    </footer>
 <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
