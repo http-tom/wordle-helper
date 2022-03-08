@@ -8,7 +8,7 @@ Can be run via commandline or via web interface.
 
 `php wordle.php` for usage instructions which are:
 
-Usage: `php wordle.php a e i _o _u`    where _prefixed letters will exclude words with those characters. Use keyword random to provide a word suggestion.
+Usage: `php wordle.php a e i _o _u \"[i a e]\"`    where _prefixed letters will exclude words with those characters. A parameter inside square brackets will match the position of those characters in the word. Use keyword random to provide a word suggestion. 
 
 `php wordle.php random` to get a random suggestion
 
