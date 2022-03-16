@@ -64,6 +64,9 @@
         let incCharEls = document.getElementsByClassName(charCells[i].className);
         for(let j = 0; j < incCharEls.length; j++) {
             let element = incCharEls[j];
+            if(i == 0 && j == 0) {
+                element.focus();
+            }
             element.addEventListener('keyup', function(e) {
                 evtCellKeyUp(e,element,charCells[i]);
             });

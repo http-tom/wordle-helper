@@ -81,15 +81,6 @@ input.frm-control {
 .mt-1 {
     margin-top: 1em;
 }
-.rounded {
-    border-radius: 50%;
-}
-.hidden {
-    display: none;
-}
-.float-right {
-    float: right;
-}
 
 li.badge {
     display: inline-block;
@@ -114,8 +105,14 @@ li.badge {
     opacity: 1;
     height: auto;
     display: block;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    width: auto;
 }
 #help-description.hidden {
     opacity: 0;
-    height: 0;
+    height: 0 !important;
+    top:-200px;
+    position: absolute;
 }
