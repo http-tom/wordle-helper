@@ -4,7 +4,6 @@ html, body {
     background: #292929;
     color: #eee;
     text-align: center;
-    /* margin: 1em 1em 4em; */
     margin: 0;
     padding: 0;
     font-family: Lato;
@@ -57,7 +56,8 @@ a:hover {
 input.frm-control {
     background-color: #131516;
     border: 1px solid #333366;
-    padding: 0.6em;
+    padding: 0.6em 0;
+    text-align: center;
     font-size: 1em;
     color: #fff;
 }
